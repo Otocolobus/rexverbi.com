@@ -476,7 +476,35 @@ header{
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 440px) {
+
+  .main-image{
+    max-width: 240px;
+  }
+
+  section#screens {
+    .slider {
+      img {
+        max-width: 240px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px)
+    and (min-width: 441px){
+
+    .main-image{
+      max-width: 420px;
+    }
+    section#screens {
+      .slider {
+        img {
+          max-width: 420px;
+        }
+      }
+    }
+
 	.logo{
 		width:100px;
 		height: auto;

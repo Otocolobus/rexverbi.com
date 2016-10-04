@@ -19,8 +19,9 @@ var appMaster = {
                 var target = $(this.hash);
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
+                    var offset = $('nav').hasClass('scrolled')? target.offset().top : target.offset().top - 149;
                     $('html,body').animate({
-                        scrollTop: target.offset().top
+                        scrollTop: offset
                     }, 1000);
                     return false;
                 }
@@ -45,7 +46,7 @@ var appMaster = {
         $('.filtering').slick({
             slidesToShow: 2,
             slidesToScroll: 1,
-            dots: true,
+            dots: false,
             responsive: [{
                 breakpoint: 1200,
                 settings: {
